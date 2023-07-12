@@ -61,6 +61,10 @@ export default {
 </script>
 
 <style scoped>
+.hello {
+  margin: 0 20px 20px;
+}
+
 h3 {
   margin: 40px 0 0;
 }
