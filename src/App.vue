@@ -25,10 +25,6 @@ export default {
   --secondary-color: #222222;
 }
 
-body {
-  margin: 0;
-}
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +36,8 @@ body {
 
 img.logo {
   width: 350px;
-  height: 350px;
+  max-width: 100%;
+  aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
 }

@@ -4,7 +4,7 @@
     <p>
       My name is Irmantas and I'm a Frontend developer based in Kaunas,
       Lithuania.<br />
-      I love ☕ and ⌨️
+      I love ☕ and creativity.
     </p>
     <h3>Look me up here</h3>
     <ul>
