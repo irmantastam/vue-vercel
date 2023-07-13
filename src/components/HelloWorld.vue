@@ -23,6 +23,19 @@
       </li>
       <li>
         <a
+          href="https://www.quora.com/profile/Irmantas-Tama%C5%A1auskas"
+          target="_blank"
+          rel="noopener"
+          title="Quora"
+          ><img
+            alt="Irmantas Tamašauskas Quora"
+            title="Quora"
+            src="../assets/quora.svg"
+          />Irmantas-Tamašauskas</a
+        >
+      </li>
+      <li>
+        <a
           href="https://www.facebook.com/irmantas.tamasauskas.73/"
           target="_blank"
           rel="noopener"
