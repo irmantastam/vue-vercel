@@ -1,4 +1,5 @@
 <template>
+  <ModeToggle />
   <img
     class="logo"
     alt="Irmantas Tamašauskas coffee break"
@@ -10,11 +11,13 @@
 </template>
 
 <script>
+import ModeToggle from "./components/ModeToggle.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
   components: {
+    ModeToggle,
     HelloWorld,
   },
 };
@@ -24,6 +27,13 @@ export default {
 :root {
   --main-color: #323232;
   --secondary-color: #222222;
+  --background-color: #ffffff;
+
+  &.dark {
+    --main-color: #ffffff;
+    --secondary-color: #cccccc;
+    --background-color: #323232;
+  }
 }
 
 html,
@@ -43,11 +53,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--main-color);
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100%;
   padding-top: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img.logo {
