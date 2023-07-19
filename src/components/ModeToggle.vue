@@ -50,62 +50,56 @@ const toggleDark = useToggle(isDark);
   -webkit-touch-callout: none;
   appearance: none;
   transition: background-color 0.3s ease;
-
-  & * {
-    box-sizing: content-box;
-  }
-
-  .mode-toggle-circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    box-shadow: inset 0 0 0 2px #a5abba;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-
-    #mode-toggle-symbol {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      border-radius: 50%;
-
-      &::before {
-        content: "";
-        position: relative;
-        width: 100%;
-        height: 100%;
-        left: 50%;
-        float: left;
-        background-color: #a5abba;
-        transition: border-radius 0.3s ease, width 0.3s ease, height 0.3s ease,
-          left 0.3s ease, transform 0.3s ease;
-      }
-    }
-  }
 }
 
-:root.dark {
-  .mode-toggle-button {
-    .mode-toggle-circle {
-      transform: translateX(19px);
+.mode-toggle-button * {
+  box-sizing: content-box;
+}
 
-      #mode-toggle-symbol {
-        &::before {
-          border-radius: 50%;
-          width: 150%;
-          height: 85%;
-          left: 40%;
-          transform: translate(-10%, -40%), rotate(-35deg);
-        }
-      }
-    }
-  }
+.mode-toggle-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  box-shadow: inset 0 0 0 2px #a5abba;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#mode-toggle-symbol {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#mode-toggle-symbol::before {
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  float: left;
+  background-color: #a5abba;
+  transition: border-radius 0.3s ease, width 0.3s ease, height 0.3s ease,
+    left 0.3s ease, transform 0.3s ease;
+}
+
+:root.dark .mode-toggle-circle {
+  transform: translateX(19px);
+}
+
+:root.dark #mode-toggle-symbol::before {
+  border-radius: 50%;
+  width: 150%;
+  height: 85%;
+  left: 40%;
+  transform: translate(-10%, -40%), rotate(-35deg);
 }
 </style>

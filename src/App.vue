@@ -28,12 +28,12 @@ export default {
   --main-color: #323232;
   --secondary-color: #222222;
   --background-color: #ffffff;
+}
 
-  &.dark {
-    --main-color: #ffffff;
-    --secondary-color: #cccccc;
-    --background-color: #323232;
-  }
+:root.dark {
+  --main-color: #ffffff;
+  --secondary-color: #cccccc;
+  --background-color: #323232;
 }
 
 html,
