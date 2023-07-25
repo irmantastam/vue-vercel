@@ -1,39 +1,25 @@
 <template>
   <ModeToggle />
-  <img
-    class="logo"
-    alt="Irmantas Tamašauskas coffee break"
-    title="Irmantas Tamašauskas coffee break"
-    src="./assets/irmantas_tamasauskas.jpg"
-  />
-  <HelloWorld msg="Welcome Folks!" />
+  <RouterView />
   <footer>irmantastamasauskas.com<br />{{ new Date().getFullYear() }}</footer>
 </template>
 
-<script>
+<script setup>
 import ModeToggle from "./components/ModeToggle.vue";
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    ModeToggle,
-    HelloWorld,
-  },
-};
+import { RouterView } from "vue-router";
 </script>
 
 <style>
 :root {
   --main-color: #323232;
-  --secondary-color: #222222;
+  --secondary-color: #a2a2a2;
   --background-color: #ffffff;
 }
 
 :root.dark {
   --main-color: #ffffff;
-  --secondary-color: #cccccc;
-  --background-color: #323232;
+  --secondary-color: #b5b5b5;
+  --background-color: #201f1f;
 }
 
 html,
@@ -62,15 +48,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-img.logo {
-  width: 300px;
-  max-width: calc(100% - 40px);
-  margin: auto 20px 0;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
 footer {
   margin-top: auto;
   width: 100%;
@@ -78,6 +55,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--main-color);
+  border-top: 1px solid var(--secondary-color);
 }
 </style>

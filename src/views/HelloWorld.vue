@@ -1,5 +1,11 @@
 <template>
   <div class="hello">
+    <img
+      class="logo"
+      alt="Irmantas Tamašauskas coffee break"
+      title="Irmantas Tamašauskas coffee break"
+      src="../assets/irmantas_tamasauskas.jpg"
+    />
     <h1>{{ msg }}</h1>
     <p>
       My name is Irmantas and I'm a Frontend developer based in Kaunas,
@@ -78,6 +84,15 @@ export default {
   margin: 0 20px 20px;
 }
 
+img.logo {
+  width: 300px;
+  max-width: calc(100% - 40px);
+  margin: auto 20px 0;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 h3 {
   margin: 40px 0 0;
 }
@@ -92,7 +107,7 @@ li:not(:last-child) {
 }
 
 a {
-  color: var(--secondary-color);
+  color: var(--main-color);
 }
 
 a img {

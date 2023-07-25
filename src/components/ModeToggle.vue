@@ -1,6 +1,5 @@
 <template>
   <div class="mode-toggle">
-    {{ isDark ? "Dark" : "Light" }}
     <button class="mode-toggle-button" @click="toggleDark()">
       <div class="mode-toggle-circle">
         <div id="mode-toggle-symbol"></div>
@@ -39,17 +38,20 @@ const toggleDark = useToggle(isDark);
   min-width: 36px;
   min-height: 20px;
   margin-left: 10px;
-  background-color: var(--main-color);
-  border: 0;
+  background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
   border-radius: 24px;
-  outline: 0;
   overflow: hidden;
   cursor: pointer;
   z-index: 2;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   appearance: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.mode-toggle-button:hover {
+  border-color: var(--main-color);
 }
 
 .mode-toggle-button * {
@@ -92,7 +94,7 @@ const toggleDark = useToggle(isDark);
 }
 
 :root.dark .mode-toggle-circle {
-  transform: translateX(19px);
+  transform: translateX(17px);
 }
 
 :root.dark #mode-toggle-symbol::before {
