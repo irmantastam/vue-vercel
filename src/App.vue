@@ -1,11 +1,12 @@
 <template>
-  <ModeToggle />
+  <ModeToggleComponent />
   <RouterView />
-  <footer>irmantastamasauskas.com<br />{{ new Date().getFullYear() }}</footer>
+  <FooterComponent />
 </template>
 
 <script setup>
-import ModeToggle from "./components/ModeToggle.vue";
+import ModeToggleComponent from "./components/ModeToggleComponent.vue";
+import FooterComponent from "./components/FooterComponent.vue";
 import { RouterView } from "vue-router";
 </script>
 
@@ -44,17 +45,6 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  padding-top: 40px;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-footer {
-  margin-top: auto;
-  width: 100%;
-  padding: 10px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid var(--secondary-color);
 }
 </style>

@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "ModeToggle",
+  name: "ModeToggleComponent",
 };
 </script>
 
@@ -24,7 +24,7 @@ const toggleDark = useToggle(isDark);
 <style>
 .mode-toggle {
   display: flex;
-  margin: 0 20px 20px;
+  margin: 20px;
   font-size: 12px;
   align-items: center;
   margin-left: auto;
@@ -37,7 +37,6 @@ const toggleDark = useToggle(isDark);
   height: 24px;
   min-width: 36px;
   min-height: 20px;
-  margin-left: 10px;
   background-color: var(--background-color);
   border: 1px solid var(--secondary-color);
   border-radius: 24px;

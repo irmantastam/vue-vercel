@@ -1,9 +1,9 @@
 <template>
-  <div class="hello">
+  <div class="home">
     <img
-      class="logo"
-      alt="Irmantas Tamašauskas coffee break"
-      title="Irmantas Tamašauskas coffee break"
+      class="image"
+      alt="Irmantas Tamašauskas profile"
+      title="Irmantas Tamašauskas profile"
       src="../assets/irmantas_tamasauskas.jpg"
     />
     <h1>{{ msg }}</h1>
@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "HomeView",
   props: {
     msg: String,
   },
@@ -80,14 +80,13 @@ export default {
 </script>
 
 <style scoped>
-.hello {
-  margin: 0 20px 20px;
+.home {
+  margin: auto 20px 20px;
 }
 
-img.logo {
+.image {
   width: 300px;
-  max-width: calc(100% - 40px);
-  margin: auto 20px 0;
+  max-width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
