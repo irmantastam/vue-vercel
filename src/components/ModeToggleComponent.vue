@@ -46,7 +46,9 @@ const toggleDark = useToggle(isDark);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   appearance: none;
-  transition: background-color 0.3s ease, border 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border 0.3s ease;
 }
 
 .mode-toggle-button:hover {
@@ -88,8 +90,12 @@ const toggleDark = useToggle(isDark);
   left: 50%;
   float: left;
   background-color: #a5abba;
-  transition: border-radius 0.3s ease, width 0.3s ease, height 0.3s ease,
-    left 0.3s ease, transform 0.3s ease;
+  transition:
+    border-radius 0.3s ease,
+    width 0.3s ease,
+    height 0.3s ease,
+    left 0.3s ease,
+    transform 0.3s ease;
 }
 
 :root.dark .mode-toggle-circle {

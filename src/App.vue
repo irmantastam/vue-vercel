@@ -45,6 +45,8 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 </style>
