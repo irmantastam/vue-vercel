@@ -1,6 +1,10 @@
 <template>
   <div class="mode-toggle">
-    <button class="mode-toggle-button" @click="toggleDark()">
+    <button
+      class="mode-toggle-button"
+      title="Dark mode toggle"
+      @click="toggleDark()"
+    >
       <div class="mode-toggle-circle">
         <div id="mode-toggle-symbol"></div>
       </div>

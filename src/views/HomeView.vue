@@ -12,7 +12,7 @@
       Lithuania.<br />
       I love ☕ and creativity.
     </p>
-    <h3>Look me up here</h3>
+    <h2>Look me up here</h2>
     <ul>
       <li>
         <a
@@ -92,7 +92,7 @@ export default {
   border-radius: 50%;
 }
 
-h3 {
+h2 {
   margin: 40px 0 0;
 }
 
