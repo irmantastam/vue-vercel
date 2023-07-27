@@ -5,6 +5,8 @@
       alt="Irmantas Tamašauskas profile"
       title="Irmantas Tamašauskas profile"
       src="../assets/irmantas_tamasauskas.jpg"
+      width="300"
+      height="300"
     />
     <h1>{{ msg }}</h1>
     <p>
@@ -24,6 +26,8 @@
             alt="Irmantas Tamašauskas Github"
             title="Github"
             src="../assets/github.svg"
+            width="30"
+            height="30"
           />irmantastam</a
         >
       </li>
@@ -37,6 +41,8 @@
             alt="Irmantas Tamašauskas Quora"
             title="Quora"
             src="../assets/quora.svg"
+            width="30"
+            height="30"
           />Irmantas-Tamašauskas</a
         >
       </li>
@@ -50,6 +56,8 @@
             alt="Irmantas Tamašauskas Facebook"
             title="Facebook"
             src="../assets/facebook.svg"
+            width="30"
+            height="30"
           />irmantas.tamasauskas.73</a
         >
       </li>
@@ -63,6 +71,8 @@
             alt="Irmantas Tamašauskas Instagram"
             title="Instagram"
             src="../assets/instagram.svg"
+            width="30"
+            height="30"
           />@irmantastamasauskas</a
         >
       </li>
@@ -85,8 +95,8 @@ export default {
 }
 
 .image {
-  width: 300px;
   max-width: 100%;
+  height: auto;
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 50%;
