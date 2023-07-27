@@ -4,7 +4,7 @@
       class="image"
       alt="Irmantas Tamašauskas profile"
       title="Irmantas Tamašauskas profile"
-      src="../assets/irmantas_tamasauskas.jpg"
+      src="../assets/irmantas_tamasauskas.webp"
       width="300"
       height="300"
     />
