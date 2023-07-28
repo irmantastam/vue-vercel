@@ -1,47 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{js,vue}\""
-  },
-  "engines": {
-    "node": "18.x"
-  },
-  "dependencies": {
-    "@vueuse/core": "^10.2.1",
-    "core-js": "^3.30.2",
-    "prettier": "^3.0.0",
-    "vue": "^3.3.4",
-    "vue-router": "4"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,vue}\""
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.21.8",
-    "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~5.0.8",
-    "@vue/cli-service": "~5.0.8",
-    "@vue/compiler-sfc": "^3.3.4",
-    "eslint": "^8.4.1",
-    "eslint-plugin-vue": "^9.14.0"
+    "nuxt": "^3.0.0",
+    "prettier": "^3.0.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "dependencies": {
+    "@vueuse/core": "^10.2.1"
+  }
 }

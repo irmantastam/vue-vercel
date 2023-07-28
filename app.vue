@@ -1,13 +1,12 @@
 <template>
   <ModeToggleComponent />
-  <RouterView />
+  <NuxtPage />
   <FooterComponent />
 </template>
 
 <script setup>
 import ModeToggleComponent from "./components/ModeToggleComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
-import { RouterView } from "vue-router";
 </script>
 
 <style>
@@ -34,7 +33,7 @@ body {
   box-sizing: border-box;
 }
 
-#app {
+#__nuxt {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
