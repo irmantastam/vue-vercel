@@ -37,9 +37,16 @@
           rel="noopener"
           title="Github"
           ><img
+            v-if="colorMode === 'dark'"
             alt="Irmantas Tamašauskas Github"
             title="Github"
-            :src="isDark ? githubLight : github"
+            :src="githubLight"
+            width="50"
+            height="50" /><img
+            v-if="colorMode === 'light'"
+            alt="Irmantas Tamašauskas Github"
+            title="Github"
+            :src="github"
             width="50"
             height="50"
         /></a>
@@ -102,8 +109,8 @@ export default {
 import github from "../assets/github.svg";
 import githubLight from "../assets/github-light.svg";
 
-import { useDark } from "@vueuse/core";
-const isDark = useDark({ disableTransition: false });
+import { useColorMode } from "@vueuse/core";
+const colorMode = useColorMode();
 </script>
 
 <style scoped>
