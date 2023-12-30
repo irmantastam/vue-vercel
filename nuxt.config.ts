@@ -13,7 +13,7 @@ export default {
         {
           name: "description",
           content:
-            "My name is Irmantas and I'm a Front End developer counting 9 professional years in the field",
+            "My name is Irmantas and I'm a Frontend developer counting 9 professional years in the field",
         },
       ],
       link: [

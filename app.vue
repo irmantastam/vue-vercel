@@ -1,6 +1,6 @@
 <template>
   <ModeToggleComponent />
-  <NuxtPage />
+  <NuxtPage msg="Hello world! 👋" />
   <FooterComponent />
 </template>
 

@@ -10,12 +10,26 @@
     />
     <h1>{{ msg }}</h1>
     <p>
-      My name is Irmantas and I'm a Frontend developer based in Kaunas,
+      My name is Irmantas and I'm a Frontend developer from Kaunas,
       Lithuania.<br />
-      I love ☕ and creativity.
+      I love ☕ and transforming ideas to a stunning digital experiences.
     </p>
-    <h2>Look me up here</h2>
+    <h2>Reach me up here</h2>
     <ul>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/irmantas-tama%C5%A1auskas-6589272a6/"
+          target="_blank"
+          rel="noopener"
+          title="LinkedIn"
+          ><img
+            alt="Irmantas Tamašauskas LinkedIn"
+            title="LinkedIn"
+            src="../assets/linkedin.svg"
+            width="50"
+            height="50"
+        /></a>
+      </li>
       <li>
         <a
           href="https://github.com/irmantastam"
@@ -26,25 +40,9 @@
             alt="Irmantas Tamašauskas Github"
             title="Github"
             src="../assets/github.svg"
-            width="30"
-            height="30"
-          />irmantastam</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.quora.com/profile/Irmantas-Tama%C5%A1auskas"
-          target="_blank"
-          rel="noopener"
-          title="Quora"
-          ><img
-            alt="Irmantas Tamašauskas Quora"
-            title="Quora"
-            src="../assets/quora.svg"
-            width="30"
-            height="30"
-          />Irmantas-Tamašauskas</a
-        >
+            width="50"
+            height="50"
+        /></a>
       </li>
       <li>
         <a
@@ -56,10 +54,9 @@
             alt="Irmantas Tamašauskas Facebook"
             title="Facebook"
             src="../assets/facebook.svg"
-            width="30"
-            height="30"
-          />irmantas.tamasauskas.73</a
-        >
+            width="50"
+            height="50"
+        /></a>
       </li>
       <li>
         <a
@@ -71,10 +68,23 @@
             alt="Irmantas Tamašauskas Instagram"
             title="Instagram"
             src="../assets/instagram.svg"
-            width="30"
-            height="30"
-          />@irmantastamasauskas</a
-        >
+            width="50"
+            height="50"
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://www.quora.com/profile/Irmantas-Tama%C5%A1auskas"
+          target="_blank"
+          rel="noopener"
+          title="Quora"
+          ><img
+            alt="Irmantas Tamašauskas Quora"
+            title="Quora"
+            src="../assets/quora.svg"
+            width="50"
+            height="50"
+        /></a>
       </li>
     </ul>
   </div>
@@ -110,8 +120,12 @@ ul {
   padding: 0;
 }
 
+li {
+  display: inline-block;
+}
+
 li:not(:last-child) {
-  margin-bottom: 4px;
+  margin-right: 10px;
 }
 
 a {
@@ -119,9 +133,6 @@ a {
 }
 
 a img {
-  width: 30px;
-  margin-right: 8px;
-  top: -1px;
   position: relative;
   vertical-align: middle;
 }
