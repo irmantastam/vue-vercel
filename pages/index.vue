@@ -39,7 +39,7 @@
           ><img
             alt="Irmantas Tamašauskas Github"
             title="Github"
-            src="../assets/github.svg"
+            :src="isDark ? githubLight : github"
             width="50"
             height="50"
         /></a>
@@ -96,6 +96,14 @@ export default {
     msg: String,
   },
 };
+</script>
+
+<script setup>
+import github from "../assets/github.svg";
+import githubLight from "../assets/github-light.svg";
+
+import { useDark } from "@vueuse/core";
+const isDark = useDark({ disableTransition: false });
 </script>
 
 <style scoped>
