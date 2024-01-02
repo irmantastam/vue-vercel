@@ -22,13 +22,9 @@
           target="_blank"
           rel="noopener"
           title="LinkedIn"
-          ><img
-            alt="Irmantas Tamašauskas LinkedIn"
-            title="LinkedIn"
-            src="../assets/linkedin.svg"
-            width="50"
-            height="50"
-        /></a>
+        >
+          <Linkedin />
+        </a>
       </li>
       <li>
         <a
@@ -36,20 +32,10 @@
           target="_blank"
           rel="noopener"
           title="Github"
-          ><img
-            v-if="colorMode === 'dark'"
-            alt="Irmantas Tamašauskas Github"
-            title="Github"
-            :src="githubLight"
-            width="50"
-            height="50" /><img
-            v-if="colorMode === 'light'"
-            alt="Irmantas Tamašauskas Github"
-            title="Github"
-            :src="github"
-            width="50"
-            height="50"
-        /></a>
+        >
+          <Github v-if="colorMode === 'light'" />
+          <GithubLight v-if="colorMode === 'dark'" />
+        </a>
       </li>
       <li>
         <a
@@ -57,13 +43,9 @@
           target="_blank"
           rel="noopener"
           title="Facebook"
-          ><img
-            alt="Irmantas Tamašauskas Facebook"
-            title="Facebook"
-            src="../assets/facebook.svg"
-            width="50"
-            height="50"
-        /></a>
+        >
+          <Facebook />
+        </a>
       </li>
       <li>
         <a
@@ -71,13 +53,9 @@
           target="_blank"
           rel="noopener"
           title="Instagram"
-          ><img
-            alt="Irmantas Tamašauskas Instagram"
-            title="Instagram"
-            src="../assets/instagram.svg"
-            width="50"
-            height="50"
-        /></a>
+        >
+          <Instagram />
+        </a>
       </li>
       <li>
         <a
@@ -85,13 +63,9 @@
           target="_blank"
           rel="noopener"
           title="Quora"
-          ><img
-            alt="Irmantas Tamašauskas Quora"
-            title="Quora"
-            src="../assets/quora.svg"
-            width="50"
-            height="50"
-        /></a>
+        >
+          <Quora />
+        </a>
       </li>
     </ul>
   </div>
@@ -106,11 +80,15 @@ export default {
 </script>
 
 <script setup>
-import github from "../assets/github.svg";
-import githubLight from "../assets/github-light.svg";
+import Linkedin from "../assets/linkedin.svg";
+import Github from "../assets/github.svg";
+import GithubLight from "../assets/github-light.svg";
+import Facebook from "../assets/facebook.svg";
+import Instagram from "../assets/instagram.svg";
+import Quora from "../assets/quora.svg";
 
 import { useColorMode } from "@vueuse/core";
-const colorMode = useColorMode();
+const colorMode = useColorMode({ disableTransition: false });
 </script>
 
 <style scoped>
@@ -147,7 +125,8 @@ a {
   color: var(--main-color);
 }
 
-a img {
+a img,
+a svg {
   position: relative;
   vertical-align: middle;
 }

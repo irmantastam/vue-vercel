@@ -1,3 +1,5 @@
+import svgLoader from "vite-svg-loader";
+
 export default {
   nitro: {
     preset: "vercel-edge",
@@ -37,5 +39,12 @@ export default {
         { rel: "manifest", href: "/site.webmanifest" },
       ],
     },
+  },
+  vite: {
+    plugins: [
+      svgLoader({
+        // Your settings.
+      }),
+    ],
   },
 };
