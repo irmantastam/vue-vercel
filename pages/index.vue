@@ -68,6 +68,15 @@
         </a>
       </li>
     </ul>
+    <a
+      href="/resume"
+      target="_blank"
+      rel="noopener"
+      title="Irmantas Tamašauskas Resume"
+      class="resume-link"
+    >
+      <Resume /> CV
+    </a>
   </div>
 </template>
 
@@ -86,6 +95,7 @@ import GithubLight from "../assets/github-light.svg";
 import Facebook from "../assets/facebook.svg";
 import Instagram from "../assets/instagram.svg";
 import Quora from "../assets/quora.svg";
+import Resume from "../assets/resume.svg";
 
 import { useColorMode } from "@vueuse/core";
 const colorMode = useColorMode({ disableTransition: false });
@@ -129,5 +139,18 @@ a img,
 a svg {
   position: relative;
   vertical-align: middle;
+}
+
+a.resume-link {
+  display: inline-flex;
+  margin: 40px 0 0;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
 }
 </style>
