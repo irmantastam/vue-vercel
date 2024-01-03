@@ -147,10 +147,5 @@ a.resume-link {
   gap: 8px;
   align-items: center;
   font-weight: 600;
-
-  svg {
-    width: 30px;
-    height: 30px;
-  }
 }
 </style>
