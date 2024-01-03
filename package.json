@@ -9,6 +9,7 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,vue}\""
   },
   "devDependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
     "nuxt": "^3.0.0",
     "prettier": "^3.0.0"
   },
