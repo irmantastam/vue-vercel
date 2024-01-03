@@ -34,7 +34,7 @@
           title="Github"
         >
           <Github v-if="colorMode === 'light'" />
-          <GithubLight v-if="colorMode === 'dark'" />
+          <GithubLight v-else />
         </a>
       </li>
       <li>
