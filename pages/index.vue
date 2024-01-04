@@ -32,8 +32,8 @@
           rel="noopener"
           title="Github"
         >
-          <Github v-if="colorMode === 'light'" />
-          <GithubLight v-else />
+          <Github v-show="colorMode === 'light'" />
+          <GithubLight v-show="colorMode === 'dark'" />
         </a>
       </li>
       <li>
