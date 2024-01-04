@@ -32,7 +32,7 @@
           rel="noopener"
           title="Github"
         >
-          <Github v-show="colorMode === 'light'" />
+          <Github v-show="colorMode !== 'dark'" />
           <GithubLight v-show="colorMode === 'dark'" />
         </a>
       </li>

@@ -113,4 +113,20 @@ const toggleDark = useToggle(isDark);
   left: 40%;
   transform: translate(-10%, -40%), rotate(-35deg);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .mode-toggle-circle {
+    transform: translateX(17px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) #mode-toggle-symbol::before {
+    border-radius: 50%;
+    width: 150%;
+    height: 85%;
+    left: 40%;
+    transform: translate(-10%, -40%), rotate(-35deg);
+  }
+}
 </style>

@@ -22,6 +22,14 @@ import FooterComponent from "./components/FooterComponent.vue";
   --background-color: #201f1f;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --main-color: #ffffff;
+    --secondary-color: #b5b5b5;
+    --background-color: #201f1f;
+  }
+}
+
 html,
 body {
   height: 100%;
