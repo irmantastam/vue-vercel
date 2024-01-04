@@ -17,7 +17,7 @@
     <ul>
       <li>
         <a
-          href="https://www.linkedin.com/in/irmantas-tama%C5%A1auskas-6589272a6/"
+          href="https://www.linkedin.com/in/irmantas-tama%C5%A1auskas-6589272a6"
           target="_blank"
           rel="noopener"
           title="LinkedIn"
@@ -38,7 +38,7 @@
       </li>
       <li>
         <a
-          href="https://www.facebook.com/irmantas.tamasauskas.73/"
+          href="https://www.facebook.com/irmantas.tamasauskas.73"
           target="_blank"
           rel="noopener"
           title="Facebook"
@@ -48,7 +48,7 @@
       </li>
       <li>
         <a
-          href="https://www.instagram.com/irmantastamasauskas/"
+          href="https://www.instagram.com/irmantastamasauskas"
           target="_blank"
           rel="noopener"
           title="Instagram"
@@ -66,6 +66,16 @@
           <Quora />
         </a>
       </li>
+      <li>
+        <a
+          href="https://stackshare.io/irmantastam/my-stack"
+          target="_blank"
+          rel="noopener"
+          title="Stackshare"
+        >
+          <Stackshare />
+        </a>
+      </li>
     </ul>
     <a
       href="/resume"
@@ -74,7 +84,7 @@
       title="Irmantas Tamašauskas Resume"
       class="resume-link"
     >
-      <Resume /> CV
+      <Resume /> Read CV
     </a>
   </div>
 </template>
@@ -94,6 +104,7 @@ import GithubLight from "../assets/github-light.svg";
 import Facebook from "../assets/facebook.svg";
 import Instagram from "../assets/instagram.svg";
 import Quora from "../assets/quora.svg";
+import Stackshare from "../assets/stackshare.svg";
 import Resume from "../assets/resume.svg";
 
 import { useColorMode } from "@vueuse/core";
@@ -102,7 +113,7 @@ const colorMode = useColorMode({ disableTransition: false });
 
 <style scoped>
 .home {
-  margin: auto 20px 20px;
+  margin: auto 16px 16px;
 }
 
 .image {
@@ -120,14 +131,10 @@ h2 {
 ul {
   list-style-type: none;
   padding: 0;
-}
-
-li {
-  display: inline-block;
-}
-
-li:not(:last-child) {
-  margin-right: 10px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 a {
