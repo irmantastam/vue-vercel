@@ -15,7 +15,7 @@ export default {
         {
           name: "description",
           content:
-            "My name is Irmantas and I'm a Frontend developer counting 9 professional years in the field",
+            "I'm a Frontend developer with over 9 years of professional experience. I ❤️ crafting optimised, accessible and elegant web solutions",
         },
       ],
       link: [

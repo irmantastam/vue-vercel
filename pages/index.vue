@@ -10,8 +10,7 @@
     />
     <h1>{{ msg }}</h1>
     <p>
-      My name is Irmantas and I'm a Frontend developer from Kaunas,
-      Lithuania.<br />
+      My name is Irmantas, a Frontend Developer from Kaunas, Lithuania.<br />
       I love ☕ and transforming ideas to a stunning digital experiences.
     </p>
     <h2>Reach me up here</h2>
