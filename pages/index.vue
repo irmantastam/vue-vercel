@@ -10,7 +10,9 @@
     />
     <h1>{{ msg }}</h1>
     <p>
-      My name is Irmantas, a Frontend Developer from Kaunas, Lithuania.<br />
+      My name is <strong>Irmantas</strong>, a
+      <strong>Frontend Developer</strong> from
+      <strong>Kaunas, Lithuania</strong>.<br />
       I love ☕ and transforming ideas to a stunning digital experiences.
     </p>
     <h2>Reach me up here</h2>
@@ -116,6 +118,10 @@ const colorMode = useColorMode({ disableTransition: false });
   margin: auto 16px 16px;
 }
 
+p {
+  font-weight: 300;
+}
+
 .image {
   max-width: 100%;
   height: auto;
@@ -137,21 +143,30 @@ ul {
   flex-wrap: wrap;
 }
 
-a {
-  color: var(--main-color);
+ul a {
+  display: block;
 }
 
-a img,
-a svg {
-  position: relative;
-  vertical-align: middle;
+ul a svg {
+  vertical-align: bottom;
+  transition: transform 0.3s ease;
+}
+
+ul a:hover svg {
+  transform: translateY(-2px);
 }
 
 a.resume-link {
   display: inline-flex;
   margin: 40px 0 0;
   gap: 8px;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 600;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a.resume-link:hover {
+  text-decoration: underline;
 }
 </style>
