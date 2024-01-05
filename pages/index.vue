@@ -122,6 +122,10 @@ p {
   font-weight: 300;
 }
 
+p strong {
+  font-weight: 500;
+}
+
 .image {
   max-width: 100%;
   height: auto;
