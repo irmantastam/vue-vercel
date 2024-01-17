@@ -20,7 +20,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       enableLiveUpdates={pageProps.previewActive}
       locale={locale || 'en-US'}
     >
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" enableSystem={true}>
         <>
           <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID || ''} />
           <main className={`${urbanist.variable} font-sans`}>
