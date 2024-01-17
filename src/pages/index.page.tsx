@@ -79,7 +79,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 title="Github"
               >
                 <Github
-                  fill={theme === 'dark' ? undefined : '#b5b5b5'}
+                  fill={theme === 'dark' ? '#b5b5b5' : undefined}
                   className="transition-transform hover:-translate-y-0.5"
                 />
               </a>
