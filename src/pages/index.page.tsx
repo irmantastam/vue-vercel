@@ -47,13 +47,13 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         )}
 
         {page.greeting && (
-          <Container className="mb-8 p-0">
+          <Container className="mb-4 p-0">
             <h1>{page.greeting}</h1>
           </Container>
         )}
 
         {page.content && (
-          <Container className="mb-10 p-0 [&_p]:my-2 [&_b]:font-semibold">
+          <Container className="mb-10 max-w-xs p-0 [&_p]:my-2 [&_b]:font-semibold">
             <ArticleContent article={page} />
           </Container>
         )}
