@@ -30,7 +30,7 @@ const useClickOutside = (ref, setIsOpen) => {
 
 export const LanguageSelector = () => {
   const { locales } = useRouter();
-  const { theme } = useTheme();
+  const { resolvedTheme: theme } = useTheme();
 
   const router = useRouter();
   const menuRef = useRef<HTMLUListElement | null>(null);
@@ -105,18 +105,18 @@ export const LanguageSelector = () => {
           <LanguageIcon
             width="18px"
             height="18px"
-            variant={theme !== 'light' ? 'white' : 'secondary'}
+            variant={theme === 'dark' ? 'white' : 'secondary'}
             className="mr-1 ml-1"
           />
           {localeName(router.locale)}
           {isOpen ? (
             <ChevronUpTrimmedIcon
-              variant={theme !== 'light' ? 'white' : 'secondary'}
+              variant={theme === 'dark' ? 'white' : 'secondary'}
               className="pl-1"
             />
           ) : (
             <ChevronDownTrimmedIcon
-              variant={theme !== 'light' ? 'white' : 'secondary'}
+              variant={theme === 'dark' ? 'white' : 'secondary'}
               className="pl-1"
             />
           )}

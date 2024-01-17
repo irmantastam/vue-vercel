@@ -21,7 +21,7 @@ import { revalidateDuration } from '@src/pages/utils/constants';
 
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
-  const { theme } = useTheme();
+  const { resolvedTheme: theme } = useTheme();
   const page = useContentfulLiveUpdates(props.page);
 
   return (
@@ -79,7 +79,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 title="Github"
               >
                 <Github
-                  fill={theme !== 'light' ? '#b5b5b5' : undefined}
+                  fill={theme === 'dark' ? undefined : '#b5b5b5'}
                   className="transition-transform hover:-translate-y-0.5"
                 />
               </a>

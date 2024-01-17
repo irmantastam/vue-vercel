@@ -2,12 +2,12 @@ import { useTheme } from 'next-themes';
 import React from 'react';
 
 export const ThemeSelector = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme: theme, setTheme } = useTheme();
 
   return (
     <div className="ml-auto flex items-center text-xs">
       <button
-        onClick={() => (theme !== 'light' ? setTheme('light') : setTheme('dark'))}
+        onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
         className="relative z-[2] h-6 min-h-[20px] w-11 min-w-[36px] cursor-pointer appearance-none overflow-hidden rounded-3xl border border-solid p-0 [&_*]:box-content"
       >
         <div className="absolute inset-y-0 left-0 m-auto h-5 w-5 overflow-hidden rounded-[50%] border-[3px] border-solid border-transparent shadow-[inset_0_0_0_2px_#a5abba] transition-transform duration-[0.3s] ease-[ease] dark:translate-x-[17px]">
