@@ -1,0 +1,36 @@
+fragment PageLandingFields on PageLanding {
+  __typename
+  sys {
+    id
+    spaceId
+  }
+  internalName
+  seoFields {
+    ...SeoFields
+  }
+  featuredBlogPost {
+    ...ReferencePageBlogPostFields
+  }
+  image {
+    ...RichImageFields
+  }
+  greeting
+  content {
+    json
+    links {
+      entries {
+        block {
+          ...RichImageFields
+        }
+      }
+    }
+  }
+}
+
+query pageLanding($locale: String, $preview: Boolean) {
+  pageLandingCollection(limit: 1, locale: $locale, preview: $preview) {
+    items {
+      ...PageLandingFields
+    }
+  }
+}

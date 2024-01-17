@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply h-full bg-gray100 text-sm text-gray600 dark:bg-colorContrastDark dark:text-gray300 md:text-sm;
+  }
+
+  .h1,
+  h1 {
+    @apply text-xl font-semibold leading-tighter md:text-4xl;
+  }
+
+  .h2,
+  h2 {
+    @apply text-xl font-semibold leading-tight md:text-3xl;
+  }
+
+  .h3,
+  h3 {
+    @apply text-base font-semibold leading-relaxed md:text-xl;
+  }
+
+  .h4,
+  h4 {
+    @apply text-xs font-semibold leading-normal md:text-base;
+  }
+
+  p {
+    @apply font-normal leading-snug tracking-snug text-gray600 dark:text-gray300 md:leading-normal;
+  }
+
+  #__next {
+    @apply h-full;
+  }
+
+  main {
+    @apply flex h-full flex-col;
+  }
+}

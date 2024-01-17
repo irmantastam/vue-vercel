@@ -1,0 +1,26 @@
+{
+  "article": {
+    "relatedArticles": "Susiję straipsniai",
+    "featured": "rekomenduojama"
+  },
+  "landingPage": {
+    "latestArticles": "Naujausi straipsniai",
+    "reachMe": "Su manimi susisiekite čia",
+    "readCv": "Skaityti CV"
+  },
+  "common": {
+    "homepage": "Pagrindinis puslapis",
+    "regionalSettings": "Regiono nustatymai",
+    "language": "Kalba",
+    "languageDrawer": "Kalbos keitimo langas"
+  },
+  "footer": {
+    "aboutUs": "apie mus",
+    "description": "Mūsų įmonė specializuojasi pažangių technologijų kūrime įvairioms pramonės šakoms. Naudojame pažangiausias technologijas ir algoritmus, kad sukurtume intelektualias sistemas, kurios gali padėti įmonėms automatizuoti užduotis, pagerinti efektyvumą ir skatinti naujoves.",
+    "powerBy": "Sukurta naudojant"
+  },
+  "notFound": {
+    "title": "Puslapis nerastas",
+    "description": "Atrodo, kad šio puslapio nėra. <0>Spustelėkite čia</0>, kad grįžtumėte į pagrindinį puslapį."
+  }
+}
