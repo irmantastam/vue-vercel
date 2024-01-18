@@ -3,6 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useTranslation } from 'next-i18next';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 import { getServerSideTranslations } from './utils/get-serverside-translations';
 
@@ -21,8 +22,14 @@ import { revalidateDuration } from '@src/pages/utils/constants';
 
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
-  const { resolvedTheme: theme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const page = useContentfulLiveUpdates(props.page);
+
+  const [theme, setTheme] = useState('');
+
+  useEffect(() => {
+    setTheme(resolvedTheme || '');
+  }, [resolvedTheme]);
 
   return (
     <>

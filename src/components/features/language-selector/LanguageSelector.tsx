@@ -30,7 +30,7 @@ const useClickOutside = (ref, setIsOpen) => {
 
 export const LanguageSelector = () => {
   const { locales } = useRouter();
-  const { resolvedTheme: theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const router = useRouter();
   const menuRef = useRef<HTMLUListElement | null>(null);
@@ -38,6 +38,11 @@ export const LanguageSelector = () => {
   const localesToShow = router.locales?.filter(locale => locale !== router.locale);
 
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState('');
+
+  useEffect(() => {
+    setTheme(resolvedTheme || '');
+  }, [resolvedTheme]);
 
   useClickOutside(containerRef, setIsOpen);
 
