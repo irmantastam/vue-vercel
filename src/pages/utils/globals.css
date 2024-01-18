@@ -18,7 +18,7 @@
 
   .h2,
   h2 {
-    @apply text-xl font-semibold leading-tight md:text-3xl;
+    @apply text-xl font-semibold leading-tight text-gray600 dark:text-gray300 md:text-3xl;
   }
 
   .h3,
