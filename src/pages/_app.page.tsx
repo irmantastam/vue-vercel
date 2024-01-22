@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     >
       <ThemeProvider attribute="class">
         <>
-          <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID || ''} />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''} />
           <main className={`${urbanist.variable} font-sans`}>
             <Layout>
               <Component {...pageProps} />
