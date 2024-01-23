@@ -13,11 +13,13 @@ import Instagram from '@icons/instagram.svg';
 import Linkedin from '@icons/linkedin.svg';
 import Quora from '@icons/quora.svg';
 import Resume from '@icons/resume.svg';
+import Stackshare from '@icons/stackshare.svg';
 import { ArticleHero, ArticleImage, ArticleContent } from '@src/components/features/article';
 import { SeoFields } from '@src/components/features/seo';
 import { Container } from '@src/components/shared/container';
 import { client, previewClient } from '@src/lib/client';
 import { revalidateDuration } from '@src/pages/utils/constants';
+import { dynamicBlurDataUrl } from '@src/utilities/dynamicBlurDataUrl';
 
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
@@ -35,19 +37,19 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       {page.seoFields && <SeoFields {...page.seoFields} />}
 
       {page.featuredBlogPost && (
-        <Container className="mb-8 p-0">
+        <Container className="mb-8">
           <Link href={`/blog/${page.featuredBlogPost.slug}`}>
             <ArticleHero article={page.featuredBlogPost} />
           </Link>
         </Container>
       )}
 
-      <Container className="mx-auto max-w-xl p-0 text-center">
+      <Container className="text-center">
         {page.image && (
           <Container className="mb-8 max-w-xs p-0">
             <ArticleImage
               image={page.image}
-              className="aspect-square rounded-full border-none object-cover"
+              className="aspect-square rounded-full object-cover object-[55%] contrast-[110%] sepia-[25%]"
             />
           </Container>
         )}
@@ -66,7 +68,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <Container className="p-0">
           <h2 className="mb-2">{t('landingPage.reachMe')}</h2>
-          <ul className="mb-10 flex flex-wrap justify-center gap-2">
+          <ul className="mb-10 flex flex-wrap justify-center gap-1">
             <li>
               <a
                 href="https://www.linkedin.com/in/irmantas-tama%C5%A1auskas-6589272a6"
@@ -120,10 +122,20 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 <Quora className="transition-transform hover:-translate-y-0.5" />
               </a>
             </li>
+            <li>
+              <a
+                href="https://stackshare.io/irmantastam/my-stack"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Stackshare"
+              >
+                <Stackshare className="transition-transform hover:-translate-y-0.5" />
+              </a>
+            </li>
           </ul>
         </Container>
 
-        <Container className="mb-4 p-0">
+        <Container className="mb-4">
           <a
             href="/resume"
             target="_blank"
@@ -158,7 +170,18 @@ export const getStaticProps: GetStaticProps = async ({ locale, draftMode: previe
       props: {
         previewActive: !!preview,
         ...(await getServerSideTranslations(locale)),
-        page,
+        page: {
+          ...page,
+          image: {
+            ...page.image,
+            image: {
+              ...page.image?.image,
+              blurHash: page.image?.image?.url
+                ? await dynamicBlurDataUrl(page.image.image.url)
+                : '',
+            },
+          },
+        },
       },
     };
   } catch {
