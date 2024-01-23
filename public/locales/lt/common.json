@@ -9,15 +9,11 @@
     "readCv": "Skaityti CV"
   },
   "common": {
-    "homepage": "Pagrindinis puslapis",
-    "regionalSettings": "Regiono nustatymai",
-    "language": "Kalba",
-    "languageDrawer": "Kalbos keitimo langas"
+    "homepage": "Pagrindinis puslapis"
   },
-  "footer": {
-    "aboutUs": "apie mus",
-    "description": "Mūsų įmonė specializuojasi pažangių technologijų kūrime įvairioms pramonės šakoms. Naudojame pažangiausias technologijas ir algoritmus, kad sukurtume intelektualias sistemas, kurios gali padėti įmonėms automatizuoti užduotis, pagerinti efektyvumą ir skatinti naujoves.",
-    "powerBy": "Sukurta naudojant"
+  "header": {
+    "theme": "Keisti temą",
+    "language": "Keisti kalbą"
   },
   "notFound": {
     "title": "Puslapis nerastas",

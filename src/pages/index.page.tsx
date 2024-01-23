@@ -13,7 +13,6 @@ import Instagram from '@icons/instagram.svg';
 import Linkedin from '@icons/linkedin.svg';
 import Quora from '@icons/quora.svg';
 import Resume from '@icons/resume.svg';
-import Stackshare from '@icons/stackshare.svg';
 import { ArticleHero, ArticleImage, ArticleContent } from '@src/components/features/article';
 import { SeoFields } from '@src/components/features/seo';
 import { Container } from '@src/components/shared/container';
@@ -66,8 +65,8 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         )}
 
         <Container className="p-0">
-          <h3 className="mb-2">{t('landingPage.reachMe')}</h3>
-          <ul className="mb-10 flex flex-wrap justify-center gap-1">
+          <h2 className="mb-2">{t('landingPage.reachMe')}</h2>
+          <ul className="mb-10 flex flex-wrap justify-center gap-2">
             <li>
               <a
                 href="https://www.linkedin.com/in/irmantas-tama%C5%A1auskas-6589272a6"
@@ -119,16 +118,6 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 title="Quora"
               >
                 <Quora className="transition-transform hover:-translate-y-0.5" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://stackshare.io/irmantastam/my-stack"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Stackshare"
-              >
-                <Stackshare className="transition-transform hover:-translate-y-0.5" />
               </a>
             </li>
           </ul>

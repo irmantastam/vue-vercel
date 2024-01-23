@@ -1,4 +1,5 @@
 import { LanguageIcon, ChevronDownTrimmedIcon, ChevronUpTrimmedIcon } from '@contentful/f36-icons';
+import { useTranslation } from 'next-i18next';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -31,6 +32,7 @@ const useClickOutside = (ref, setIsOpen) => {
 export const LanguageSelector = () => {
   const { locales } = useRouter();
   const { resolvedTheme } = useTheme();
+  const { t } = useTranslation();
 
   const router = useRouter();
   const menuRef = useRef<HTMLUListElement | null>(null);
@@ -104,6 +106,7 @@ export const LanguageSelector = () => {
           aria-haspopup="true"
           aria-expanded={isOpen}
           aria-controls="menu-locale"
+          title={t('header.language')}
           className="flex items-center font-normal uppercase"
           onClick={() => setIsOpen(currentState => !currentState)}
         >
