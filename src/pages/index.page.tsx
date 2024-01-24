@@ -172,15 +172,19 @@ export const getStaticProps: GetStaticProps = async ({ locale, draftMode: previe
         ...(await getServerSideTranslations(locale)),
         page: {
           ...page,
-          image: {
-            ...page.image,
-            image: {
-              ...page.image?.image,
-              blurHash: page.image?.image?.url
-                ? await dynamicBlurDataUrl(page.image.image.url)
-                : '',
-            },
-          },
+          ...(page.image
+            ? {
+                image: {
+                  ...page.image,
+                  image: {
+                    ...page.image?.image,
+                    blurHash: page.image?.image?.url
+                      ? await dynamicBlurDataUrl(page.image.image.url)
+                      : '',
+                  },
+                },
+              }
+            : {}),
         },
       },
     };
