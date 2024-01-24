@@ -1,5 +1,5 @@
 import NextImage, { ImageProps as NextImageProps } from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { ImageFieldsFragment } from '@src/lib/__generated/sdk';
@@ -10,7 +10,11 @@ interface ImageProps extends Omit<ImageFieldsFragment, '__typename'> {
 }
 
 export const CtfImage = ({ url, width, height, title, nextImageProps, blurHash }: ImageProps) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, []);
 
   if (!url || !width || !height) return null;
 
