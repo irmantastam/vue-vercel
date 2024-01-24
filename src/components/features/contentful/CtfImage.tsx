@@ -11,10 +11,11 @@ interface ImageProps extends Omit<ImageFieldsFragment, '__typename'> {
 
 export const CtfImage = ({ url, width, height, title, nextImageProps, blurHash }: ImageProps) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
-  }, []);
+    setIsLoading(!isLoaded);
+  }, [isLoaded]);
 
   if (!url || !width || !height) return null;
 
@@ -24,11 +25,14 @@ export const CtfImage = ({ url, width, height, title, nextImageProps, blurHash }
       width={width}
       height={height}
       alt={title || ''}
+      title={title || ''}
       placeholder="blur"
       blurDataURL={blurHash}
       {...nextImageProps}
       className={twMerge(nextImageProps?.className, `${isLoading ? 'blur-md ' : ''}transition-all`)}
-      onLoad={() => setIsLoading(false)}
+      onLoad={() => {
+        setIsLoaded(true);
+      }}
       priority
     />
   );
