@@ -1,4 +1,4 @@
-import { LanguageIcon, ChevronDownTrimmedIcon, ChevronUpTrimmedIcon } from '@contentful/f36-icons';
+import { ChevronDownTrimmedIcon, ChevronUpTrimmedIcon } from '@contentful/f36-icons';
 import { useTranslation } from 'next-i18next';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
@@ -110,12 +110,6 @@ export const LanguageSelector = () => {
           className="flex items-center font-normal uppercase"
           onClick={() => setIsOpen(currentState => !currentState)}
         >
-          <LanguageIcon
-            width="18px"
-            height="18px"
-            variant={theme === 'dark' ? 'white' : 'secondary'}
-            className="mr-1 ml-1"
-          />
           {localeName(router.locale)}
           {isOpen ? (
             <ChevronUpTrimmedIcon
