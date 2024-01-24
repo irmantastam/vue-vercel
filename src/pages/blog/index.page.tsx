@@ -24,11 +24,12 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         __typename="ComponentSeo"
         noindex={true}
         nofollow={true}
-        pageTitle="Irmantas Tamašauskas | Blog"
+        pageTitle={t('blog.title')}
+        pageDescription={t('blog.description')}
       />
 
       <Container className="my-8  md:mb-10 lg:mb-16">
-        <h2 className="mb-4 md:mb-6">{t('landingPage.latestArticles')}</h2>
+        <h2 className="mb-4 md:mb-6">{t('blog.latestArticles')}</h2>
         <ArticleTileGrid className="md:grid-cols-2 lg:grid-cols-3" articles={posts} />
       </Container>
     </>

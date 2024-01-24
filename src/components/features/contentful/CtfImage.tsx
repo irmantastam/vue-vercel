@@ -30,9 +30,7 @@ export const CtfImage = ({ url, width, height, title, nextImageProps, blurHash }
       blurDataURL={blurHash}
       {...nextImageProps}
       className={twMerge(nextImageProps?.className, `${isLoading ? 'blur-md ' : ''}transition-all`)}
-      onLoad={() => {
-        setIsLoaded(true);
-      }}
+      onLoad={() => setIsLoaded(true)}
       priority
     />
   );

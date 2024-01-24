@@ -1,20 +1,21 @@
 {
-  "article": {
-    "relatedArticles": "Susiję straipsniai",
-    "featured": "rekomenduojama"
-  },
-  "landingPage": {
-    "latestArticles": "Naujausi straipsniai",
-    "reachMe": "Su manimi susisiekite čia",
-    "resume": "Irmantas Tamašauskas reziumė",
-    "readCv": "Skaityti CV"
-  },
-  "common": {
-    "homepage": "Pagrindinis puslapis"
-  },
   "header": {
+    "homepage": "Irmantas Tamašauskas - pagrindinis puslapis",
+    "logo": "Irmantas Tamašauskas - logo",
     "theme": "Keisti temą",
     "language": "Keisti kalbą"
+  },
+  "landingPage": {
+    "reachMe": "Su manimi susisiekite čia",
+    "resume": "Irmantas Tamašauskas - reziumė",
+    "readCv": "Skaityti CV"
+  },
+  "blog": {
+    "title": "Irmantas Tamašauskas - blogas",
+    "description": "Sveiki atvykę į mano blogą!",
+    "latestArticles": "Naujausi straipsniai",
+    "relatedArticles": "Susiję straipsniai",
+    "featured": "rekomenduojama"
   },
   "notFound": {
     "title": "Puslapis nerastas",

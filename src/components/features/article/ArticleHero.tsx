@@ -49,7 +49,7 @@ export const ArticleHero = ({
                 isReversedLayout ? 'lg:left-6 xl:left-12' : 'lg:right-6 xl:right-12',
               )}
             >
-              {t('article.featured')}
+              {t('blog.featured')}
             </ArticleLabel>
           )}
           <div

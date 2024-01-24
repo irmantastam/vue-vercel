@@ -1,20 +1,21 @@
 {
-  "article": {
-    "relatedArticles": "Related articles",
-    "featured": "featured"
-  },
-  "landingPage": {
-    "latestArticles": "Latest articles",
-    "reachMe": "Reach me up here",
-    "resume": "Irmantas Tamašauskas resume",
-    "readCv": "Read CV"
-  },
-  "common": {
-    "homepage": "Homepage"
-  },
   "header": {
+    "homepage": "Irmantas Tamašauskas - Homepage",
+    "logo": "Irmantas Tamašauskas - Logo",
     "theme": "Change theme",
     "language": "Change language"
+  },
+  "landingPage": {
+    "reachMe": "Reach me up here",
+    "resume": "Irmantas Tamašauskas - Resume",
+    "readCv": "Read CV"
+  },
+  "blog": {
+    "title": "Irmantas Tamašauskas - Blog",
+    "description": "Welcome to my blog page!",
+    "latestArticles": "Latest articles",
+    "relatedArticles": "Related articles",
+    "featured": "featured"
   },
   "notFound": {
     "title": "Page not found",

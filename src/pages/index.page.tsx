@@ -70,17 +70,17 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <h2 className="mb-2">{t('landingPage.reachMe')}</h2>
           <ul className="mb-10 flex flex-wrap justify-center gap-1">
             <li>
-              <a
+              <Link
                 href="https://www.linkedin.com/in/irmantas-tama%C5%A1auskas-6589272a6"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="LinkedIn"
               >
                 <Linkedin className="transition-transform hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://github.com/irmantastam"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                   fill={theme === 'dark' ? '#b5b5b5' : undefined}
                   className="transition-transform hover:-translate-y-0.5"
                 />
-              </a>
+              </Link>
             </li>
             <li>
               <a
@@ -103,40 +103,40 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
               </a>
             </li>
             <li>
-              <a
+              <Link
                 href="https://www.instagram.com/irmantastamasauskas"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Instagram"
               >
                 <Instagram className="transition-transform hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://www.quora.com/profile/Irmantas-Tama%C5%A1auskas"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Quora"
               >
                 <Quora className="transition-transform hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="https://stackshare.io/irmantastam/my-stack"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Stackshare"
               >
                 <Stackshare className="transition-transform hover:-translate-y-0.5" />
-              </a>
+              </Link>
             </li>
           </ul>
         </Container>
 
         <Container className="mb-4">
-          <a
+          <Link
             href="/resume"
             target="_blank"
             rel="noopener"
@@ -144,7 +144,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             className="inline-flex items-center gap-2 font-semibold hover:underline"
           >
             <Resume /> {t('landingPage.readCv')}
-          </a>
+          </Link>
         </Container>
       </Container>
     </>

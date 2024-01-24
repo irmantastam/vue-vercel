@@ -13,10 +13,10 @@ export const Header = () => {
     <header className="mb-4 border-b border-gray200 py-5 dark:border-gray500">
       <nav>
         <Container className="flex items-center justify-center gap-4">
-          <Link href="/" title={t('common.homepage')}>
+          <Link href="/" title={t('header.homepage')}>
             <NextImage
               src="/favicons/favicon-32x32.png"
-              alt="Irmantas Tamašauskas logo"
+              alt={t('header.logo')}
               width={32}
               height={32}
             />
