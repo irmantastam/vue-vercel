@@ -140,7 +140,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             href="/resume"
             target="_blank"
             rel="noopener"
-            title="Irmantas Tamašauskas Resume"
+            title={t('landingPage.resume')}
             className="inline-flex items-center gap-2 font-semibold hover:underline"
           >
             <Resume /> {t('landingPage.readCv')}
