@@ -7,9 +7,10 @@ import { ComponentRichImage } from '@src/lib/__generated/sdk';
 interface ArticleImageProps {
   image: ComponentRichImage;
   className?: string;
+  priority?: boolean;
 }
 
-export const ArticleImage = ({ image, className }: ArticleImageProps) => {
+export const ArticleImage = ({ image, className, priority }: ArticleImageProps) => {
   const inspectorProps = useContentfulInspectorMode({ entryId: image.sys.id });
   return image.image ? (
     <figure>
@@ -23,6 +24,7 @@ export const ArticleImage = ({ image, className }: ArticleImageProps) => {
                 : 'rounded-2xl border border-gray300 shadow-lg',
               className,
             ),
+            priority,
           }}
           {...image.image}
         />

@@ -26,12 +26,13 @@ export const CtfImage = ({ url, width, height, title, nextImageProps, blurHash }
       height={height}
       alt={title || ''}
       title={title || ''}
-      placeholder="blur"
-      blurDataURL={blurHash}
+      {...(blurHash ? { placeholder: 'blur', blurDataURL: blurHash } : {})}
       {...nextImageProps}
-      className={twMerge(nextImageProps?.className, `${isLoading ? 'blur-md ' : ''}transition-all`)}
+      className={twMerge(
+        nextImageProps?.className,
+        `${isLoading && blurHash ? 'blur-md ' : ''}transition-all`,
+      )}
       onLoad={() => setIsLoaded(true)}
-      priority
     />
   );
 };

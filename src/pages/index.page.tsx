@@ -50,6 +50,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             <ArticleImage
               image={page.image}
               className="aspect-square rounded-full object-cover object-[55%] contrast-[110%] sepia-[25%]"
+              priority
             />
           </Container>
         )}

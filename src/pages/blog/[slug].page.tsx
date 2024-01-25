@@ -9,6 +9,7 @@ import { SeoFields } from '@src/components/features/seo';
 import { Container } from '@src/components/shared/container';
 import { client, previewClient } from '@src/lib/client';
 import { revalidateDuration } from '@src/pages/utils/constants';
+import { dynamicBlurDataUrl } from '@src/utilities/dynamicBlurDataUrl';
 
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
@@ -65,12 +66,39 @@ export const getStaticProps: GetStaticProps = async ({ params, locale, draftMode
       };
     }
 
+    const getBlogPost = async () => ({
+      ...blogPost,
+      content: {
+        ...blogPost.content,
+        links: {
+          ...blogPost?.content?.links,
+          entries: {
+            ...blogPost?.content?.links?.entries,
+            block: await Promise.all(getBlogPostBlock() as any),
+          },
+        },
+      },
+    });
+
+    const getBlogPostBlock = () =>
+      blogPost?.content?.links?.entries?.block.map(async item => ({
+        ...item,
+        ...(item?.__typename === 'ComponentRichImage'
+          ? {
+              image: {
+                ...item?.image,
+                blurHash: await dynamicBlurDataUrl(item?.image?.url || ''),
+              },
+            }
+          : {}),
+      }));
+
     return {
       revalidate: revalidateDuration,
       props: {
         ...(await getServerSideTranslations(locale)),
         previewActive: !!preview,
-        blogPost,
+        blogPost: await getBlogPost(),
         isFeatured,
       },
     };
