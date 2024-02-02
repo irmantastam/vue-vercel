@@ -10,6 +10,7 @@ import { Container } from '@src/components/shared/container';
 import { PageBlogPostOrder } from '@src/lib/__generated/sdk';
 import { client, previewClient } from '@src/lib/client';
 import { revalidateDuration } from '@src/pages/utils/constants';
+import { dynamicBlurDataUrl } from '@src/pages/utils/dynamicBlurDataUrl';
 
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
@@ -48,12 +49,27 @@ export const getStaticProps: GetStaticProps = async ({ locale, draftMode: previe
     });
     const posts = blogPostsData.pageBlogPostCollection?.items;
 
+    const getPosts = async () =>
+      Promise.all(
+        posts?.map(async item => ({
+          ...item,
+          ...(item?.__typename === 'PageBlogPost'
+            ? {
+                featuredImage: {
+                  ...item?.featuredImage,
+                  blurHash: await dynamicBlurDataUrl(item?.featuredImage?.url || ''),
+                },
+              }
+            : {}),
+        })) as any,
+      );
+
     return {
       revalidate: revalidateDuration,
       props: {
         previewActive: !!preview,
         ...(await getServerSideTranslations(locale)),
-        posts,
+        posts: await getPosts(),
       },
     };
   } catch {

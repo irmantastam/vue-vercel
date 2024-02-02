@@ -9,7 +9,7 @@ import { SeoFields } from '@src/components/features/seo';
 import { Container } from '@src/components/shared/container';
 import { client, previewClient } from '@src/lib/client';
 import { revalidateDuration } from '@src/pages/utils/constants';
-import { dynamicBlurDataUrl } from '@src/utilities/dynamicBlurDataUrl';
+import { dynamicBlurDataUrl } from '@src/pages/utils/dynamicBlurDataUrl';
 
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation();
