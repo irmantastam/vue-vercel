@@ -2,7 +2,7 @@ repo_name: irmantastam/irmantastamasauskas.com
 report_id: 23a6cfdea3a0d333e208273033d803cb
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:11:09+00:00'
+timestamp: '2024-02-29T19:23:35+00:00'
 requested_by: irmantastam
 provider: github
 branch: main
@@ -43,7 +43,7 @@ tools:
   detection_source_url: https://github.com/irmantastam/irmantastamasauskas.com
   detection_source: Repo Metadata
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 3.0.0
   license: MIT
