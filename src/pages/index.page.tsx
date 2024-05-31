@@ -7,13 +7,7 @@ import { useState, useEffect } from 'react';
 
 import { getServerSideTranslations } from './utils/get-serverside-translations';
 
-import Facebook from '@icons/facebook.svg';
-import Github from '@icons/github.svg';
-import Instagram from '@icons/instagram.svg';
-import Linkedin from '@icons/linkedin.svg';
-import Quora from '@icons/quora.svg';
-import Resume from '@icons/resume.svg';
-import Stackshare from '@icons/stackshare.svg';
+import { Facebook, Github, Instagram, Linkedin, Quora, Resume, Youtube } from '@icons/index';
 import { ArticleHero, ArticleImage, ArticleContent } from '@src/components/features/article';
 import { SeoFields } from '@src/components/features/seo';
 import { Container } from '@src/components/shared/container';
@@ -105,6 +99,16 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
             </li>
             <li>
               <Link
+                href="https://www.youtube.com/@irmantastamasauskas"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Youtube"
+              >
+                <Youtube className="transition-transform hover:-translate-y-0.5" />
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="https://www.instagram.com/irmantastamasauskas"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -121,16 +125,6 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
                 title="Quora"
               >
                 <Quora className="transition-transform hover:-translate-y-0.5" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://stackshare.io/irmantastam/my-stack"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Stackshare"
-              >
-                <Stackshare className="transition-transform hover:-translate-y-0.5" />
               </Link>
             </li>
           </ul>
